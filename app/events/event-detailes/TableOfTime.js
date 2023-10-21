@@ -1,9 +1,9 @@
 
-function TableOfTime() {
+function TableOfTime({data}) {
   return (
     <div className="relative overflow-x-auto">
-    <table className=" text-center w-full text-sm text-left text-gray-500 dark:text-gray-400">
-      <thead className="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+    <table className=" text-center w-full text-sm text-left text-gray-900 dark:text-gray-400">
+      <thead className="text-xs text-white uppercase bg-slate-800 dark:bg-gray-700 dark:text-gray-400">
         <tr>
           <th scope="col" className="px-6 py-3">
             نوع البلاغ 
@@ -21,33 +21,53 @@ function TableOfTime() {
             وقت الانتهاء
           </th>
           <th scope="col" className="px-6 py-3">
-            اسم الشارع
+            عدد المساارت المغلقة 
+          </th>
+          <th scope="col" className="px-6 py-3">
+            خدمات مساندة 
+          </th>
+          <th scope="col" className="px-6 py-3">
+           موقع الحدث
           </th>
         </tr>
       </thead>
       <tbody>
-        <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
-          <td className="px-6 py-4">
-            حادث
+        <tr className="bg-slate-800 text-white border-b dark:bg-gray-800 dark:border-gray-700">
+          <td className="py-2">
+            {data.type}
           </td>
-          <td className="px-6 py-4">
-            العمليات
+          <td className=" py-2">
+            {data.source}
           </td>
-          <td className="px-6 py-4">
-            16:22
+          <td className=" py-2">
+            {data.start}
           </td>
-          <td className="px-6 py-4">
-            16:30
+          <td className=" py-2">
+            {data.arrive}
           </td>
-          <td className="px-6 py-4">
-            16:50
+          <td className=" py-2">
+            {data.finsh}
           </td>
-          <td className="px-6 py-4">
-            شارع الشيخ راشد بعد دبي مول
+          <td className=" py-2 ">
+            {data.closed_paths}
+          </td>
+          <td className=" py-2 ">
+            {data.helper}
+          </td>
+          <td className=" py-2">
+            {data.street}
+            -
+            {data.description}
           </td>
         </tr>
+        
       </tbody>
     </table>
+
+    <h1 className="text-md text-black w-100 border-2 my-1 border-violet-300 rounded py-2 ">
+     {data.note&& data.note}
+     {!data.note&& 'لاتوجد ملاحظات'}
+    </h1>
   </div>
 
   )
