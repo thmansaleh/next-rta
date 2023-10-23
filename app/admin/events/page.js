@@ -11,8 +11,8 @@ const res = await fetch('https://dull-plum-antelope-tutu.cyclic.cloud/api/events
   const data = await res.json()
 
 
-  return (
-    <EventsTable data={data}/>
+  return (<h1>111111<h1>
+  //  <EventsTable data={data}/>
    )
 }
 
