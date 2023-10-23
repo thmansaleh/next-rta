@@ -6,8 +6,7 @@ function Vehicles({eventNo}) {
 
     const [vehicles,setVehicles]=useState([])
     useEffect( () => {
-      // const url= true?process.env.URL:'http://localhost:3000'
-      const url= 'https://next-eight-xi.vercel.app'
+       const url= 'https://dull-plum-antelope-tutu.cyclic.cloud'
       fetch(`${url}/api/vechicles?event_no=${eventNo}`)
   .then(response => response.json())
   .then(data => setVehicles(data))
