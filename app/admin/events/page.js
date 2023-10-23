@@ -3,13 +3,13 @@ import EventsTable from "./EventsTable";
 
 export default async function Events() {
 
-//   });
-const res = await fetch('http://localhost:3000/api/events' ,{
+  const url= true?process.env.URL:'http://localhost:3000'
+const res = await fetch(`${url}/api/events` ,{
   next: { revalidate: 0 }, // Revalidate every 60 seconds
 }
 )
   const data = await res.json()
-
+console.log(data)
 
   return (
     <EventsTable data={data}/>

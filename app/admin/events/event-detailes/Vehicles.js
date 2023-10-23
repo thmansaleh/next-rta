@@ -6,8 +6,8 @@ function Vehicles({eventNo}) {
 
     const [vehicles,setVehicles]=useState([])
     useEffect( () => {
-       
-        fetch(`http://localhost:3000/api/vechicles?event_no=${eventNo}`)
+      const url= true?process.env.URL:'http://localhost:3000'
+      fetch(`${url}/api/vechicles?event_no=${eventNo}`)
   .then(response => response.json())
   .then(data => setVehicles(data))
 
