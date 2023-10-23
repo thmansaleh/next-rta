@@ -3,7 +3,7 @@ export async function GET(request) {
     const eventNo = searchParams.get('event_no')
     const res = await fetch(`https://dull-plum-antelope-tutu.cyclic.cloud/api/vehicles?event_no=${eventNo}`, {
 
-        next: { revalidate: 0 },
+        next: { revalidate: 1 },
         headers: {
             'Content-Type': 'application/json',
         },

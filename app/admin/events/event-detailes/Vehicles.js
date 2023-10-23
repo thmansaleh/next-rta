@@ -11,8 +11,7 @@ function Vehicles({eventNo}) {
   .then(response => response.json())
   .then(data => setVehicles(data))
 
-
-    }, []);
+}, []);
     
  
   if (vehicles.length>0) {
@@ -25,7 +24,7 @@ function Vehicles({eventNo}) {
       </tr>
     </thead>
     <tbody>
-        {vehicles? vehicles.map(e=>{
+        {vehicles?vehicles.map(e=>{
             return  <tr className="text-sm font-bold">
             <td className=" font-bold px-6 py-1 border-b border-gray-300"><button type="button" className="text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200  rounded-lg  px-4 py-3">{e.plate_no}</button>
     </td>

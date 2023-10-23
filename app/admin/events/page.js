@@ -9,7 +9,7 @@ const res = await fetch(`${url}/api/events` ,{
 }
 )
   const data = await res.json()
-console.log(data)
+
 
   return (
     <EventsTable data={data}/>
