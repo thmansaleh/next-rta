@@ -2,7 +2,7 @@ import EventsTable from "./EventsTable";
 export const metadata= {
   title: 'events',
   description: 'othman saleh',
-  viewport: 'width=650'
+  viewport: 'width=650',
 }
 export default async function Events() {
 
