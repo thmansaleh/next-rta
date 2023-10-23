@@ -21,13 +21,23 @@ const appSlice= createSlice({
     
 },
   reducers: {
-    setNav: (state, action) => {
-      state.name=action.payload.pageName;
-      state.show=action.payload.show;
+    addMarkabat: (state, action) => {
+      state.markabat.push(
+     {
+        plate_no:"",
+        stop:"",
+        type:""
+      }
+     )
     }
    
-  },
+  }
+
+
+
+
+
 });
 
-export const { setNav } = navigationSlice.actions;
+export const {addMarkabat } = navigationSlice.actions;
 export default navigationSlice.reducer;
