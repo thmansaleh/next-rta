@@ -2,10 +2,22 @@
 import { createSlice } from '@reduxjs/toolkit';
 
 const appSlice= createSlice({
-  name: 'app',
+  name: 'add-event',
   initialState: {
-    cars:[],
-    streets:[],
+    markabat:[
+      {
+        plate_no:"",
+        stop:"",
+        type:""
+      }
+    ],
+    street:"",
+    car_id:"",
+    source:"",
+    type:"",
+    helper:"",
+    description:"",
+    event_no:"",
     
 },
   reducers: {
