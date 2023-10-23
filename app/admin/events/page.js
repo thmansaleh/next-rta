@@ -6,9 +6,9 @@ export const metadata= {
 }
 export default async function Events() {
 
-  const url= 'https://dull-plum-antelope-tutu.cyclic.cloud'
-const res = await fetch(`${url}/api/events`,{
-  next: { revalidate: 1 }
+  
+const res = await fetch(`https://dull-plum-antelope-tutu.cyclic.cloud/api/events`,{
+  next: { revalidate: 5}
 }
 )
   const data = await res.json()
