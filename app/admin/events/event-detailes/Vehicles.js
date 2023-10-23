@@ -7,13 +7,12 @@ function Vehicles({eventNo}) {
     const [vehicles,setVehicles]=useState([])
     useEffect( () => {
        
-        fetch(`https://dull-plum-antelope-tutu.cyclic.cloud/api/vehicles?event_no=${eventNo}`)
+        fetch(`http://localhost:3000/api/vechicles?event_no=${eventNo}`)
   .then(response => response.json())
   .then(data => setVehicles(data))
 
 
     }, []);
-    console.log(vehicles)
     
  
   if (vehicles.length>0) {

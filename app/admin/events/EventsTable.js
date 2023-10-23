@@ -29,7 +29,7 @@ export default  function EventsTable({data}) {
         </thead>
         <tbody>
   
-             {data.map(e=>{
+             {data?.map(e=>{
                 return <TableItem data={e}/>
              
              })}
