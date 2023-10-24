@@ -1,11 +1,15 @@
 "use client"
 import {useDispatch,useSelector} from 'react-redux';
 import { updateMarkabat } from '@/app/store/features/markabatSlice';
+import { useEffect } from 'react';
 
 function VehiclesItem({id}) {
+  const  markabat = useSelector((state) => state.markabat);
+  // useEffect(() => {
+  //   console.log(markabat[id].plateNo)
+  // }, [markabat]);
   const dispatch=useDispatch()
-  const  markabat = useSelector((state) => state.markabat.markabat);
-console.log(markabat[id])
+// console.log(markabat[id])
   return (
     <tr className="text-center">
                 <td className="whitespace-nowrap  py-4 font-medium">
@@ -43,7 +47,7 @@ console.log(markabat[id])
                 </td>
                 <td className="whitespace-nowrap  py-4 px-6 font-medium">
                 <input
-               onChange={(e)=>dispatch(updateMarkabat({id:id,name:'stope',value:e.target.value}))}
+               onChange={(e)=>dispatch(updateMarkabat({id:id,name:'stop',value:e.target.value}))}
 
                  dir="ltr" value={markabat[id].stop} type="text" className="w-100 text-center w-20 border border-gray-300 p-2 rounded-lg focus:outline-none focus:ring focus:border-blue-500" />
 

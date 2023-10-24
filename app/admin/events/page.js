@@ -8,7 +8,7 @@ export default async function Events() {
 
   
 const res = await fetch(`https://dull-plum-antelope-tutu.cyclic.cloud/api/events`,{
-  next: { revalidate: 5}
+  next: { revalidate: 1}
 }
 )
   const data = await res.json()

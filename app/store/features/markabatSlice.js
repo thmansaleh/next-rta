@@ -3,33 +3,27 @@ import { createSlice } from '@reduxjs/toolkit';
 
 const markabat= createSlice({
   name: 'markabat',
-  initialState: {
-    markabat:[
-      {
-        plateNo:"123",
-        stop:"jhgfd",
-        type:"",
-        source:""
-      }
-    ],
-    
-},
+  initialState: [
+
+  ],
   reducers: {
     addMarkabat: (state) => {
-      state.markabat.push(
+      state.push(
         {
           plateNo:"",
           stop:"",
-          type:"",
-          source:""
+          type:"صالون",
+          source:"دبي"
         }
      )
     },
-    updateMarkabat: (state, action) => {
+    updateMarkabat:  (state, action) => {
       const { id,name, value } = action.payload;
-      state.markabat[id].name = value;
-      state=(state)
-      // console.log(action.payload)
+     state[id][name] = value;
+      // state=(state)
+     
+        console.log(value)
+ 
     },
    
   }
