@@ -6,25 +6,18 @@ const appSlice= createSlice({
   initialState: {
     markabat:[
       {
-        plate_no:"",
+        plateNo:"",
         stop:"",
         type:""
       }
     ],
-    street:"",
-    car_id:"",
-    source:"",
-    type:"",
-    helper:"",
-    description:"",
-    event_no:"",
     
 },
   reducers: {
     addMarkabat: (state, action) => {
       state.markabat.push(
      {
-        plate_no:"",
+        plateNo:"",
         stop:"",
         type:""
       }
