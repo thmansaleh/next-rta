@@ -22,7 +22,7 @@ const appSlice= createSlice({
         type:""
       }
      )
-    }
+    },
    
   }
 
