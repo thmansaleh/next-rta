@@ -1,27 +1,35 @@
 "use client"
 import { createSlice } from '@reduxjs/toolkit';
 
-const appSlice= createSlice({
-  name: 'add-event',
+const markabat= createSlice({
+  name: 'markabat',
   initialState: {
     markabat:[
       {
-        plateNo:"",
-        stop:"",
-        type:""
+        plateNo:"123",
+        stop:"jhgfd",
+        type:"",
+        source:""
       }
     ],
     
 },
   reducers: {
-    addMarkabat: (state, action) => {
+    addMarkabat: (state) => {
       state.markabat.push(
-     {
-        plateNo:"",
-        stop:"",
-        type:""
-      }
+        {
+          plateNo:"",
+          stop:"",
+          type:"",
+          source:""
+        }
      )
+    },
+    updateMarkabat: (state, action) => {
+      const { id,name, value } = action.payload;
+      state.markabat[id].name = value;
+      state=(state)
+      // console.log(action.payload)
     },
    
   }
@@ -32,5 +40,5 @@ const appSlice= createSlice({
 
 });
 
-export const {addMarkabat } = navigationSlice.actions;
-export default navigationSlice.reducer;
+export const {addMarkabat ,updateMarkabat } = markabat.actions;
+export default markabat.reducer;

@@ -1,10 +1,10 @@
 "use client"
 import { configureStore } from '@reduxjs/toolkit';
-// import navigationReducer from './features/navigationSlice';
+import markabatReducer from './features/markabatSlice';
 
 const store = configureStore({
     reducer: {
-        // navigation: navigationReducer,
+        markabat: markabatReducer,
     },
   });
   

@@ -1,20 +1,16 @@
 "use client"
+import { useSelector ,useDispatch} from 'react-redux';
 
-import { useState } from "react"
 import VehiclesItem from "./VehiclesItem"
+import { addMarkabat } from '@/app/store/features/markabatSlice';
+import { useState } from 'react';
 
 function Vehicles() {
-    const [cars,setCars]=useState([
-        [
-            {
-    
-                plateNo:'',
-                type:'',
-                stop:'',
-                source:''
-            }
-        ]
-    ])
+ 
+  const  Vehicles = useSelector((state) => state.markabat.markabat);
+  const dispatch=useDispatch()
+  // console.log(Vehicles)
+  
   return (
     <div className=" text-center flex flex-col">
     <div className="overflow-x-auto sm:-mx-6 lg:-mx-8">
@@ -31,12 +27,9 @@ function Vehicles() {
             </thead>
             <tbody className="text-center">
 
-              {cars.map((e,i)=>{
+              {Vehicles.map((e,i)=>{
                   return  <VehiclesItem
-                   plateNo={e.plateNo}
-                   stop={e.stop}
-                   source={e.source}
-                   type={e.type}
+                   id={i}
                    />
               })}
             </tbody>
@@ -44,7 +37,7 @@ function Vehicles() {
         </div>
       </div>
     </div>
-    <button className="w-full py-2 rounded bg-emerald-400 text-white">اضافة مركبة أخرى</button>
+    <button onClick={()=>dispatch(addMarkabat())} className="w-full py-2 rounded bg-emerald-400 text-white">اضافة مركبة أخرى</button>
   </div>
   )
 }
