@@ -1,5 +1,13 @@
+'use client'
+
+import { updateEventValuse } from "@/app/store/features/eventValuse";
+import { useDispatch ,useSelector} from "react-redux";
 
 function Times() {
+  const  data = useSelector((state) => state.eventValuse);
+  const dispatch=useDispatch()
+   
+
   return (
     <div className=" text-center flex flex-col">
     <div className="overflow-x-auto sm:-mx-6 lg:-mx-8">
@@ -16,13 +24,23 @@ function Times() {
             <tbody>
               <tr className="text-center">
                 <td className="whitespace-nowrap px-6 py-4 font-medium">
-                  <input type="text" className="text-center w-20 border border-gray-300 p-2 rounded-lg focus:outline-none focus:ring focus:border-blue-500" />
+                  <input 
+                  onChange={(e)=>dispatch(updateEventValuse({name:'start',value:e.target.value}))}
+
+                  value={data.start}
+                  type="text" className="text-center w-20 border border-gray-300 p-2 rounded-lg focus:outline-none focus:ring focus:border-blue-500" />
                 </td>
                 <td className="whitespace-nowrap px-6 py-4 font-medium">
-                  <input type="text" className="text-center w-20 border border-gray-300 p-2 rounded-lg focus:outline-none focus:ring focus:border-blue-500" />
+                  <input 
+                  onChange={(e)=>dispatch(updateEventValuse({name:'arrive',value:e.target.value}))}
+                  value={data.arrive}
+                  type="text" className="text-center w-20 border border-gray-300 p-2 rounded-lg focus:outline-none focus:ring focus:border-blue-500" />
                 </td>
                 <td className="whitespace-nowrap px-6 py-4 font-medium">
-                  <input type="text" className="text-center w-20 border border-gray-300 p-2 rounded-lg focus:outline-none focus:ring focus:border-blue-500" />
+                  <input
+                  onChange={(e)=>dispatch(updateEventValuse({name:'finsh',value:e.target.value}))}
+                  value={data.finsh}
+                  type="text" className="text-center w-20 border border-gray-300 p-2 rounded-lg focus:outline-none focus:ring focus:border-blue-500" />
                 </td>
               </tr>
             </tbody>

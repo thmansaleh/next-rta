@@ -1,5 +1,12 @@
+'use client'
+
+import { updateEventValuse } from "@/app/store/features/eventValuse";
+import { useDispatch ,useSelector} from "react-redux";
+
 function SecondSection({sources}) {
-// console.log(sources)
+  const  data = useSelector((state) => state.eventValuse);
+  const dispatch=useDispatch()
+  
   return (
     <div className=" text-center flex flex-col">
     <div className="overflow-x-auto sm:-mx-6 lg:-mx-8">
@@ -16,17 +23,27 @@ function SecondSection({sources}) {
             <tbody>
               <tr className="text-center">
                 <td className="whitespace-nowrap  py-4 font-medium w-100 ">
-                  <input type="text" className="w-40 text-center w-20 border border-gray-300 p-2 rounded-lg focus:outline-none focus:ring focus:border-blue-500" />
+                  <input 
+                  onChange={(e)=>dispatch(updateEventValuse({name:'eventNo',value:e.target.value}))}
+                  value={data.eventNo}
+                  type="text" className="w-40 text-center w-20 border border-gray-300 p-2 rounded-lg focus:outline-none focus:ring focus:border-blue-500" />
                 </td>
                 <td className="whitespace-nowrap  py-4 font-medium w-100 ">
-                  <input type="text" className="w-40 text-center w-20 border border-gray-300 p-2 rounded-lg focus:outline-none focus:ring focus:border-blue-500" />
+                  <input 
+                  onChange={(e)=>dispatch(updateEventValuse({name:'type',value:e.target.value}))}
+value={data.type}
+                  type="text" className="w-40 text-center w-20 border border-gray-300 p-2 rounded-lg focus:outline-none focus:ring focus:border-blue-500" />
                 </td>
                 <td className="whitespace-nowrap  px-6 py-4 font-medium">
-                  <select id="countries" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-100 p-2.5 ">
+                  <select 
+                   onChange={(e)=>dispatch(updateEventValuse({name:'sourceId',value:e.target.value}))}
+
+                  id="countries" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-100 p-2.5 ">
                  {sources.map(e=>{
                   return  <option value={e.id}>{e.name}</option>
 
                  })}
+
                   </select>
                 </td>
               </tr>

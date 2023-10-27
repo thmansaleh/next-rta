@@ -3,7 +3,6 @@ import { useSelector ,useDispatch} from 'react-redux';
 
 import VehiclesItem from "./VehiclesItem"
 import { addMarkabat } from '@/app/store/features/markabatSlice';
-import { useState } from 'react';
 
 function Vehicles() {
  
@@ -40,7 +39,7 @@ function Vehicles() {
     </div>
   </div>}
 
-    <button onClick={()=>dispatch(addMarkabat())} className="w-full py-2 rounded bg-emerald-400 text-white">اضافة مركبة </button>
+    <button onClick={()=>dispatch(addMarkabat())} className="w-40 py-2 rounded bg-emerald-400 text-white">اضافة مركبة </button>
                 </>
   )
 }

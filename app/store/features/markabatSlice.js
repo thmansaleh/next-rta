@@ -4,7 +4,7 @@ import { createSlice } from '@reduxjs/toolkit';
 const markabat= createSlice({
   name: 'markabat',
   initialState: [
-
+  
   ],
   reducers: {
     addMarkabat: (state) => {

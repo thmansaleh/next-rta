@@ -1,26 +1,29 @@
 "use client"
 import { createSlice } from '@reduxjs/toolkit';
 
-const markabat= createSlice({
+const eventValuse= createSlice({
   name: 'eventValuse',
   initialState: {
-    shift:'',
-    carId:'',
-    eventNo:'',
-    eventType:'',
-    timeReceive:'',
-    timeArrive:'',
-    timeFinsh:'',
-    timeFinsh:'',
-    closedPaths:'',
+    shift:'ليل',
+    carId:'10',
+    eventNo:'65465445',
+    type:'صالون',
+    start:'22',
+    arrive:'23',
+    finsh:'25',
+    sourceId:'1',
+    closedPaths:'1',
+    locationDescription:'بعد المنارة',
     note:'',
+    streetId:'3',
+    data:'2023-2-3'
 
 
   },
   reducers: {
     updateEventValuse:  (state, action) => {
       const { name, value } = action.payload;
-     state.name = value;
+     state[name]= value;
     
     },
    
@@ -32,5 +35,5 @@ const markabat= createSlice({
 
 });
 
-export const {updateEventValuse } = markabat.actions;
+export const {updateEventValuse } = eventValuse.actions;
 export default eventValuse.reducer;

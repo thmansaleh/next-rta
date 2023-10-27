@@ -5,11 +5,7 @@ import { useEffect } from 'react';
 
 function VehiclesItem({id}) {
   const  markabat = useSelector((state) => state.markabat);
-  // useEffect(() => {
-  //   console.log(markabat[id].plateNo)
-  // }, [markabat]);
   const dispatch=useDispatch()
-// console.log(markabat[id])
   return (
     <tr className="text-center">
                 <td className="whitespace-nowrap  py-4 font-medium">
