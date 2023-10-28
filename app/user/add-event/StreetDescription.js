@@ -61,11 +61,17 @@ import { useDispatch ,useSelector} from "react-redux";
       </div>
     </div>
     <input 
+                  onChange={(e)=>dispatch(updateEventValuse({name:'helper',value:e.target.value}))}
+                  value={data.helper}
+                  type="text" 
+                  placeholder="خدمات مساندة"
+                  className="my-2 text-center w-40 border border-gray-600 p-2 rounded-lg focus:outline-none focus:ring focus:border-blue-500" />
+    <input 
                   onChange={(e)=>dispatch(updateEventValuse({name:'note',value:e.target.value}))}
                   value={data.note}
                   type="text" 
                   placeholder="الملاحظات"
-                  className="w-full text-center w-20 border border-gray-300 p-2 rounded-lg focus:outline-none focus:ring focus:border-blue-500" />
+                  className="w-full  text-center w-20 border border-gray-300 p-2 rounded-lg focus:outline-none focus:ring focus:border-blue-500" />
 
   </div>
   )

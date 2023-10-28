@@ -16,6 +16,7 @@ const eventValuse= createSlice({
     locationDescription:'بعد المنارة',
     note:'',
     streetId:'3',
+    helper:'',
     data:'2023-2-3'
 
 

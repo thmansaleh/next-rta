@@ -1,5 +1,5 @@
 import FristSecton from "./FristSecton"
-import SaveButton from "./SaveButton"
+import SaveModal from "./SaveModal"
 import SecondSection from "./SecondSection"
 import StreetDescription from "./StreetDescription"
 import Times from "./Times"
@@ -27,8 +27,8 @@ async function page() {
       <Times />
       <Vehicles />
       <StreetDescription streets={streets}/>
-      <SaveButton/>
-
+      {/* <SaveButton/> */}
+      <SaveModal/>
     </div>
 
   )

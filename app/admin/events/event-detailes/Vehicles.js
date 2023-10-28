@@ -6,7 +6,7 @@ function Vehicles({ eventNo }) {
 
   const [vehicles, setVehicles] = useState(false)
   useEffect(() => {
-    fetch(`https://dull-plum-antelope-tutu.cyclic.cloud/api/markabat?event=${eventNo}`)
+    fetch(`/api/markabat?event_no=${eventNo}`)
       .then(response => response.json())
       .then(data => {
         setVehicles(data)

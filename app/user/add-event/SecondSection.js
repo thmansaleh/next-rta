@@ -26,7 +26,7 @@ function SecondSection({sources}) {
                   <input 
                   onChange={(e)=>dispatch(updateEventValuse({name:'eventNo',value:e.target.value}))}
                   value={data.eventNo}
-                  type="text" className="w-40 text-center w-20 border border-gray-300 p-2 rounded-lg focus:outline-none focus:ring focus:border-blue-500" />
+                  type="number" className="w-40 text-center w-20 border border-gray-300 p-2 rounded-lg focus:outline-none focus:ring focus:border-blue-500" />
                 </td>
                 <td className="whitespace-nowrap  py-4 font-medium w-100 ">
                   <input 
