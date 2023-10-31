@@ -15,7 +15,7 @@ export async function GET() {
   
 export async function DELETE(id) {
     const id = await req.json()
-   const data = await deleteEvent(id)
+   const dataa = await deleteEvent(id)
 
 return Response.json(id )
 
