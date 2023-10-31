@@ -1,5 +1,5 @@
 'use client'
-import { deleteEvent } from "@/app/libs/deleteEvent";
+import deleteEvent  from "@/app/libs/deleteEvent";
 import { useRef, useState } from "react";
 import { useSelector } from "react-redux";
 
