@@ -18,6 +18,7 @@ export default function DeleteModal({id}) {
     message.current.textContent = 'جاري الحذف...'
 
   const data =await deleteEvent(id)
+console.log(`id from modal ${id}`)
   if (data) {
     message.current.textContent=' تم الحذف بنجاح '
     loader.current.style.display = 'none'
