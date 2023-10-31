@@ -24,7 +24,7 @@ function TableItem({data}) {
     </td>
     <td className=" py-2">
       <Modal data={data}/>
-      <DeleteModal id={data}/>
+      <DeleteModal id={data.id}/>
            </td>
   </tr>
 
