@@ -14,7 +14,7 @@ export async function GET() {
 
   
 export async function DELETE(id) {
-    const id = await req.json()
+    
    const dataa = await deleteEvent(id)
 
 return Response.json(id )
