@@ -2,6 +2,7 @@
 // import { useEffect, useState } from "react"
 // import Modal from "./event-detailes/Modal"
 
+import DeleteModal from "./event-detailes/DeleteModal"
 import Modal from "./event-detailes/Modal"
 
 function TableItem({data}) {
@@ -21,7 +22,9 @@ function TableItem({data}) {
     <td className=" py-2">
       {data.date}
     </td>
-    <td className=" py-2"><Modal data={data}/>
+    <td className=" py-2">
+      <Modal data={data}/>
+      <DeleteModal id={data.id}/>
            </td>
   </tr>
 

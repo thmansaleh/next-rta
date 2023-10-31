@@ -1,5 +1,7 @@
+import deleteEvent from "@/app/libs/deleteEvent"
+
 export async function GET() {
-    const res = await fetch('https://dull-plum-antelope-tutu.cyclic.cloud/api/events',
+    const res = await fetch('https://dull-plum-antelope-tutu.cyclic.cloud/events',
     {
         next:{revalidate:0}
     }
@@ -7,4 +9,14 @@ export async function GET() {
     const data = await res.json()
    
     return Response.json( data )
+  }
+
+
+  
+export async function DELETE(id) {
+    const id = await req.json()
+   const data = await deleteEvent(id)
+
+return Response.json(id )
+
   }

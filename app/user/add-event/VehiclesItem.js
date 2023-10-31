@@ -19,7 +19,6 @@ function VehiclesItem({id}) {
                     <option value="دبي">دبي</option>
                     <option value="عجمان">عجمان</option>
                     <option value="ام القوين">ام القوين</option>
-                 
                   </select>
                 </td>
                 <td className="whitespace-nowrap py-4 font-medium">
