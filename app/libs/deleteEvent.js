@@ -1,7 +1,7 @@
 
 export const deleteEvent= async (id)=> {
 console.log(id)
-    const response = await fetch(`/events/${id}`, {
+    const response = await fetch(`https://dull-plum-antelope-tutu.cyclic.cloud/events/${id}`, {
         method: 'DELETE',
         headers: {
             'Content-Type': 'application/json'
