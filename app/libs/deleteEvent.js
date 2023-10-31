@@ -1,5 +1,5 @@
 
-export default const deleteEvent= async (id)=> {
+export default async function deleteEvent(id){
 console.log(id)
     const response = await fetch(`https://dull-plum-antelope-tutu.cyclic.cloud/events/${id}`, {
         method: 'DELETE',
