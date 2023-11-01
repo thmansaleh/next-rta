@@ -6,6 +6,8 @@ import { useDispatch ,useSelector} from "react-redux";
  function FristSecton({cars}) {
   const  data = useSelector((state) => state.eventValuse);
   const dispatch=useDispatch()
+ 
+
   
   return (
     <div className=" text-center flex flex-col">

@@ -7,7 +7,7 @@ const eventValuse= createSlice({
     shift:'ليل',
     carId:'10',
     eventNo:'65465445',
-    type:'صالون',
+    type:'تعطل مركبة',
     start:'22',
     arrive:'23',
     finsh:'25',
@@ -17,7 +17,6 @@ const eventValuse= createSlice({
     note:'',
     streetId:'3',
     helper:'',
-    data:'2023-2-3'
 
 
   },

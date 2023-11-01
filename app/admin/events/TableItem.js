@@ -5,7 +5,7 @@
 import DeleteModal from "./event-detailes/DeleteModal"
 import Modal from "./event-detailes/Modal"
 
-function TableItem({data}) {
+function TableItem({data,index}) {
  
  
   return (<tr className="text-center bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600">
@@ -24,7 +24,7 @@ function TableItem({data}) {
     </td>
     <td className=" py-2">
       <Modal data={data}/>
-      <DeleteModal id={data.id}/>
+      <DeleteModal index={index} id={data.id}/>
            </td>
   </tr>
 

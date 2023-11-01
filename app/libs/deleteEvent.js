@@ -10,7 +10,7 @@ console.log(id)
     
     const data = await response.json()
     console.log(data)
-return true
+return data
   
 }
 

@@ -1,8 +1,20 @@
+"use client"
+import { useEffect, useState } from "react"
 import TableItem from "./TableItem"
+import { useDispatch, useSelector } from "react-redux"
+import {  addAllEvents} from "@/app/store/features/eventsAdmin";
 
-// "use client"
 export default  function EventsTable({data}) {
-// console.log(data)
+  // console.log(data)
+
+  const events = useSelector((state) => state.eventsAdmin);
+  
+  const dispatch =useDispatch()
+  
+// const [event,setEvents]=useState(data)
+useEffect(() => {
+  dispatch(addAllEvents(data))
+}, []);
   return (
     <div dir="rtl" className="relative overflow-x-auto shadow-md sm:rounded-lg text-center">
       <table className="w-full text-sm text-left text-gray-500 dark:text-gray-400  ">
@@ -29,8 +41,8 @@ export default  function EventsTable({data}) {
         </thead>
         <tbody>
   
-             {data?.map(e=>{
-                return <TableItem data={e}/>
+             {events?.map((e,i)=>{
+                return <TableItem data={e} index={i}/>
              
              })}
         

@@ -1,25 +1,26 @@
 'use client'
 import deleteEvent  from "@/app/libs/deleteEvent";
+import {  deleteEventFromStore} from "@/app/store/features/eventsAdmin";
 import { useRef, useState } from "react";
-import { useSelector } from "react-redux";
+import { useDispatch} from "react-redux";
 
 
-export default function DeleteModal({id}) {
-  const event = useSelector((state) => state.eventValuse);
-  const markabat = useSelector((state) => state.markabat);
+export default function DeleteModal({id,index}) {
+  const dispatch = useDispatch()
 
   const [showModal, setShowModal] = useState(false);
   const message = useRef()
   const buttons = useRef()
   const loader = useRef()
-  const save = async () => {
-    buttons.current.style.display = 'none'
+  const save =  async () => {
+        buttons.current.style.display = 'none'
     loader.current.style.display = 'block'
     message.current.textContent = 'جاري الحذف...'
 
   const data =await deleteEvent(id)
 console.log(`id from modal ${id}`)
-  if (data) {
+  if (data=='success') {
+    dispatch(deleteEventFromStore(index))
     message.current.textContent=' تم الحذف بنجاح '
     loader.current.style.display = 'none'
 setTimeout(() => {
