@@ -42,6 +42,7 @@ import { useDispatch ,useSelector} from "react-redux";
                   <input 
                   onChange={(e)=>dispatch(updateEventValuse({name:'locationDescription',value:e.target.value}))}
                   value={data.locationDescription}
+                  placeholder="الوصف"
                   type="text" className="mx-1 text-center border border-gray-300 p-2 rounded-lg focus:outline-none focus:ring focus:border-blue-500" />
 
                   

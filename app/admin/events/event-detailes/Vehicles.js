@@ -2,11 +2,11 @@
 
 import { useEffect, useState } from "react"
 
-function Vehicles({ eventNo }) {
+function Vehicles({ eventId }) {
 
   const [vehicles, setVehicles] = useState(false)
   useEffect(() => {
-    fetch(`/api/markabat?event_no=${eventNo}`)
+    fetch(`/api/vehicles?event_id=${eventId}`)
       .then(response => response.json())
       .then(data => {
         setVehicles(data)
@@ -30,7 +30,7 @@ function Vehicles({ eventNo }) {
             <td className=" font-bold px-6 py-1 border-b border-gray-300"><button type="button" className="text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200  rounded-lg  px-4 py-3">{e.plate_no}</button>
             </td>
             <td className="px-6  border-b border-gray-300">{e.type} </td>
-            <td className="px-6 border-b border-gray-300">مسار اول</td>
+            <td className="px-6 border-b border-gray-300">{e.stop}</td>
           </tr>
         })
        }

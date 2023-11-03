@@ -64,9 +64,10 @@ function TableOfTime({data}) {
       </tbody>
     </table>
 
-    <h1 className="text-md text-black w-100 border-2 my-1 border-violet-300 rounded py-2 ">
-     {data.note&& data.note}
-     {!data.note&& 'لاتوجد ملاحظات'}
+    <h1 className="text-md text-right w-100 border-2 my-1 border-violet-300 rounded py-2 px-1 ">
+     {/* {data.note.length>1&& `الملاحظات: ${data.note}`}
+     {data.note.length<1& 'لاتوجد ملاحظات'} */}
+     {data.note.length>0?`الملاحظات: ${data.note}`:'لاتوجد ملاحظات'}
     </h1>
   </div>
 

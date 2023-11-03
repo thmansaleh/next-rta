@@ -32,7 +32,7 @@ className="text-green-700 hover:text-white border border-green-700 hover:bg-gree
                 {/*body*/}
                 <div className="relative p-6 flex-auto ">
                   <TableOfTime data={data}/>
-             <Vehicles eventNo={data.event_no}/>
+             <Vehicles eventId={data.id}/>
                   
                 </div>
              
