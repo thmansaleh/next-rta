@@ -18,7 +18,7 @@ export default function SaveModal() {
     message.current.textContent = 'جاري الارسال...'
 
   const data =await saveEvent(event,markabat)
-  if (data) {
+  if (data=='successfully') {
     message.current.textContent='تم الارسال بنجاح '
     loader.current.style.display = 'none'
 setTimeout(() => {
