@@ -1,6 +1,6 @@
 import deleteEvent from "@/app/libs/deleteEvent"
 
-export  function GET() {
+export async  function GET() {
 
         const res = await fetch(`https://dull-plum-antelope-tutu.cyclic.cloud/api/events`,
     {
