@@ -5,7 +5,7 @@ import LoginForm from "./LoginForm"
 const page = () => {
   
   
-    <LoginForm/>
+  return  <LoginForm/>
   };
   
   export default page;
