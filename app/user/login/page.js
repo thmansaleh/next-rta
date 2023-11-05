@@ -1,8 +1,7 @@
-
+import LoginForm from "./LoginForm"
 const page = () => {
 
-
-return <h1>login</h1>
+return <LoginForm/>
 
 };
 
