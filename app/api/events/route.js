@@ -2,8 +2,13 @@ import deleteEvent from "@/app/libs/deleteEvent"
 
 export  function GET() {
 
-    
-    return Response.json( "othman")
+        const res = await fetch(`https://dull-plum-antelope-tutu.cyclic.cloud/api/events`,
+    {
+        next:{revalidate:0}
+    }
+    )
+const data =await res.json()
+    return Response.json( data)
   }
 
 
