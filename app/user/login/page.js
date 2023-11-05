@@ -2,10 +2,10 @@
 import Link from "next/link";
 import LoginForm from "./LoginForm"
 
-const login = () => {
+const page = () => {
   
   
     <LoginForm/>
   };
   
-  export default login;
+  export default page;
