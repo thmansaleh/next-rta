@@ -1,6 +1,6 @@
 export async function GET() {
     const res = await fetch('https://dull-plum-antelope-tutu.cyclic.cloud/api/cars',{
-        next:{revalidate:0}
+        next:{revalidate:2}
     }
      
     )
