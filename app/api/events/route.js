@@ -5,7 +5,10 @@ const token = localStorage.getItem('token')
     const res = await fetch('https://dull-plum-antelope-tutu.cyclic.cloud/events',
     {
         next:{revalidate:0},
+headers: {
+      'Content-Type': 'application/json',
 'Authorization': token
+}
     }
     )
     const data = await res.json()
