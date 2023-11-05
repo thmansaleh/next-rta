@@ -1,5 +1,5 @@
 'use client'
-import React, { useState } from 'react';
+import { useState } from 'react';
 import Link from 'next/link
 const LoginForm = () => {
   
@@ -56,7 +56,7 @@ const [username, setUsername] = useState('');
                 />
               </div>
               <div className="flex justify-between items-center mb-6">
-                <Link href="./login/change-password" className="text-sm text-blue-600 hover:text-blue-800 hover:underline">
+                <Link href="#" change-password" className="text-sm text-blue-600 hover:text-blue-800 hover:underline">
                   هل نسيت كلمة السر؟
                 </Link>
               </div>
