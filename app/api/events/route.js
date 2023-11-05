@@ -1,6 +1,6 @@
 import deleteEvent from "@/app/libs/deleteEvent"
 
-export async  function GET() {
+export  function GET() {
 const token = localStorage.getItem('token')
 
         fetch('https://dull-plum-antelope-tutu.cyclic.cloud/events', {
