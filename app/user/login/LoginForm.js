@@ -9,7 +9,7 @@ const [username, setUsername] = useState('');
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const response = await fetch('('https://dull-plum-antelope-tutu.cyclic.cloud/api/user-login', {
+            const response = await fetch('https://dull-plum-antelope-tutu.cyclic.cloud/api/user-login', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ username, password })
