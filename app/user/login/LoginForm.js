@@ -2,15 +2,35 @@
 import React, { useState } from 'react';
 
 const LoginForm = () => {
-  const [username, setUsername] = useState('');
-  const [password, setPassword] = useState('');
+  
+const [username, setUsername] = useState('');
+    const [password, setPassword] = useState('');
 
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    // Handle the login logic here
-    console.log('Logging in with:', { username, password });
-    // Possible POST request to server with the credentials
-  };
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        try {
+            const response = await fetch('http://localhost:3000/login', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ username, password })
+            });
+            const data = await response.json();
+            if (response.status === 200) {
+                localStorage.setItem('token', data.token); // Storing the token
+                alert('Login successful!');
+            } else {
+                alert('Login failed!');
+            }
+        } catch (error) {
+            console.error('Login error:', error);
+        }
+    };
+
+
+
+
+
+
 
   return (
     <div className="flex items-center justify-center min-h-screen bg-gray-100">
