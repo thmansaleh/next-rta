@@ -25,56 +25,58 @@ const [username, setUsername] = useState('');
             console.error('Login error:', error);
         }
     };
-
-
-
-
-
-
-
-  return (
-    <div className="flex items-center justify-center min-h-screen bg-gray-100">
-      <div className="px-8 py-6 mt-4 text-left bg-white shadow-lg">
-        <h3 className="text-2xl font-bold text-center">Admin Login</h3>
-        <form onSubmit={handleSubmit}>
-          <div className="mt-4">
-            <div>
-              <label className="block" htmlFor="username">Username</label>
-              <input
-                type="text"
-                placeholder="Username"
-                id="username"
-                onChange={(e) => setUsername(e.target.value)}
-                value={username}
-                className="w-full px-4 py-2 mt-2 border rounded-md focus:outline-none focus:ring-1 focus:ring-blue-600"
-                required
-              />
-            </div>
-            <div className="mt-4">
-              <label className="block" htmlFor="password">Password</label>
-              <input
-                type="password"
-                placeholder="Password"
-                id="password"
-                onChange={(e) => setPassword(e.target.value)}
-                value={password}
-                className="w-full px-4 py-2 mt-2 border rounded-md focus:outline-none focus:ring-1 focus:ring-blue-600"
-                required
-              />
-            </div>
-            <div className="flex items-baseline justify-between">
+    return (
+        <div dir="rtl" className="bg-gray-100 min-h-screen flex items-center justify-center px-4">
+          <div className="bg-white p-8 rounded-lg shadow-lg max-w-sm w-full">
+            <form onSubmit={handleSubmit}>
+              <div className="mb-6">
+                <label htmlFor="email" className="block mb-2 text-sm font-medium text-gray-900">
+                  اسم المستخدم 
+                </label>
+                <input
+                  onChange={(e) => setUsername(e.target.value)}
+                  value={username}
+                  type="text"
+                  id="email"
+                  className="text-right bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+                  required
+                />
+              </div>
+              <div className="mb-6">
+                <label htmlFor="password" className="block mb-2 text-sm font-medium text-gray-900">
+                  كلمة السر
+                </label>
+                <input
+                  onChange={(e) => setPassword(e.target.value)}
+                  value={password}
+                  type="password"
+                  id="password"
+                  className="text-right bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+                  required
+                />
+              </div>
+              <div className="flex justify-between items-center mb-6">
+                <Link href="./login/change-password" className="text-sm text-blue-600 hover:text-blue-800 hover:underline">
+                  هل نسيت كلمة السر؟
+                </Link>
+              </div>
+              
               <button
                 type="submit"
-                className="px-6 py-2 mt-4 text-white bg-blue-600 rounded-lg hover:bg-blue-900"
+                className="text-white bg-blue-500 hover:bg-blue-700 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full px-5 py-2.5 text-center"
               >
-                Login
+                تسجيل الدخول
               </button>
-            </div>
+            </form>
           </div>
-        </form>
-      </div>
-    </div>
-  );
+        </div>
+      );
+
+
+
+
+
+
 };
 
 export default LoginForm;
