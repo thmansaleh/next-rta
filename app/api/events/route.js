@@ -1,10 +1,15 @@
 import deleteEvent from "@/app/libs/deleteEvent"
 
 export async  function GET() {
+const token = localStorage.getItem('token')
 
         const res = await fetch(`https://dull-plum-antelope-tutu.cyclic.cloud/api/events`,
     {
         next:{revalidate:0}
+headers: {
+            'Authorization': token,
+            'Content-Type': 'application/json'
+        }
     }
     )
 const data =await res.json()
