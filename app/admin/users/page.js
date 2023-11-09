@@ -1,5 +1,9 @@
 import UsersTable from "./UsersTable"
-
+export const metadata= {
+  title: 'users',
+  description: 'othman saleh',
+  viewport: 'width=650',
+}
  async function page() {
   const res= await fetch('https://dull-plum-antelope-tutu.cyclic.cloud/users',{
     next:{revalidate:0}
