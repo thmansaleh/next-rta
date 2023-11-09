@@ -7,7 +7,8 @@ export const metadata= {
 export default async function Events() {
 
   const production=false
-  const url =production?'http://localhost:3000':'https://next-eight-xi.vercel.app'
+  // const url =production?'http://localhost:3000':'https://next-eight-xi.vercel.app'
+const url = "https://dull-plum-antelope-tutu.cyclic.cloud/events"
 const res = await fetch(`${url}/api/events`,{
   next: { revalidate: 0}
 }
