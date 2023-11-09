@@ -1,6 +1,8 @@
 import AdminPanel from "./AdminPanel"
 
-function page() {
+  function page() {
+
+
   return (
     <AdminPanel/>
   )
