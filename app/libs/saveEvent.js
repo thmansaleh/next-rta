@@ -1,7 +1,7 @@
 
 export const saveEvent= async (event,markabat)=> {
 
-    const response = await fetch('/api/new-event', {
+    const response = await fetch('https://dull-plum-antelope-tutu.cyclic.cloud/api/add-event', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
@@ -13,7 +13,7 @@ export const saveEvent= async (event,markabat)=> {
     });
     
     const data = await response.json()
-    console.log(data)
+    // console.log(data)
     return data
 }
 
