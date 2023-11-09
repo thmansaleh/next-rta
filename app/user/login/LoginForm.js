@@ -1,4 +1,5 @@
 'use client'
+
 import { useState } from 'react';
 import Link from 'next/link'
 const LoginForm = () => {
@@ -9,21 +10,25 @@ const [username, setUsername] = useState('');
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const response = await fetch('https://dull-plum-antelope-tutu.cyclic.cloud/api/user-login', {
+            const response = await fetch('http://localhost:3001/api/user-login', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ username, password })
             });
             const data = await response.json();
+            console.log(data)
             if (response.status === 200) {
-                localStorage.setItem('token', data.token); // Storing the token
-                alert('Login successful!');
+              localStorage.setItem('token',data.token)
+              alert('Login successful!');
+
             } else {
                 alert('Login failed!');
             }
         } catch (error) {
             console.error('Login error:', error);
         }
+
+
     };
     return (
         <div dir="rtl" className="bg-gray-100 min-h-screen flex items-center justify-center px-4">
