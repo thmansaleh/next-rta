@@ -7,10 +7,10 @@ import Link from 'next/link';
 const AdminPanel = () => {
 
         const menuItems = [
-          { name: "خبراء السير", icon: faUsers, link: "admin/users" },
+          { name: "خبراء السير", icon: faUsers, link: "#" },
           { name: "الأحداث", icon: faCalendarAlt, link: "/admin/events" },
           { name: "الدوريات", icon: faCar, link: "admin/cars" },
-          { name: "الأجازات", icon: faCalendarTimes, link: "#off-days" }
+          { name: "الأجازات", icon: faCalendarTimes, link: "#" }
         ];
 
   return (
