@@ -21,7 +21,7 @@ export default function AddUserModal() {
           >
             <div className="relative w-auto my-6 mx-auto max-w-3xl">
               {/*content*/}
-              <div className="border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none">
+              <div className="border-0 rounded-lg shadow-lg relative flex flex-col w-80 bg-white outline-none focus:outline-none">
             
          <ModalForm/>    
                 <div className="flex items-center justify-end p-6 border-t border-solid border-blueGray-200 rounded-b">
