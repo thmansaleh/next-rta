@@ -16,8 +16,14 @@ const res = await fetch(url,{
   const data = await res.json()
 
 
-  return (
-    <EventsTable data={data}/>
-   )
+    if (data.length>0) {
+      return <div>
+        <h2 className="text-center text-md text-gray-600 my-2">الاحداث التي لم يتم تسليمها</h2>
+        <EventsTable data={data}/>
+        </div>
+    }else{
+      return <h2 className="text-center text-2xl text-gray-600 mt-5">لاتوجد احداث</h2>
+    }
+   
 }
 

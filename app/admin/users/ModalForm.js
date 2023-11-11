@@ -1,6 +1,6 @@
 export default function ModalForm(){
 
-return <form action className="text-right">
+return <form action className="text-right p-3">
   <div>
     <label className="block" htmlFor="email">الأسم</label>
     <input type="text" className="w-full px-4 py-2 mt-2 border rounded-md focus:outline-none focus:ring-1 focus:ring-blue-600" />
@@ -35,6 +35,6 @@ return <form action className="text-right">
       {/* Add more options as needed */}
     </select>
   </div>
-  <button className="px-6 py-2 mt-4 text-white bg-blue-600 rounded-lg hover:bg-blue-900">Login</button>
+  {/* <button className="px-6 py-2 mt-4 text-white bg-blue-600 rounded-lg hover:bg-blue-900">Login</button> */}
 </form>
 }

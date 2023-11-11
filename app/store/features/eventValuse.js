@@ -4,18 +4,18 @@ import { createSlice } from '@reduxjs/toolkit';
 const eventValuse= createSlice({
   name: 'eventValuse',
   initialState: {
-    shift:'',
-    carId:'',
+    shift:'1',
+    carId:'1',
     eventNo:'',
     type:'تعطل مركبة',
-    start:'22',
-    arrive:'23',
-    finsh:'25',
+    start:'',
+    arrive:'',
+    finsh:'',
     sourceId:'1',
-    closedPaths:'1',
+    closedPaths:'0',
     locationDescription:'',
     note:'',
-    streetId:'',
+    streetId:'2',
     helper:'',
 
 
